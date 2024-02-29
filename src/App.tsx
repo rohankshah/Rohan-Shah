@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar.tsx";
 import InnerNav from "./components/InnerNav.tsx";
 import InnerNavMobile from "./components/InnerNavMobile.tsx";
 import QuestionAnswer from "./components/QuestionAnswer/QuestionAnswer.tsx";
+import QuestionMobile from "./components/QuestionAnswer/QuestionMobile.tsx";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <InnerNav />
         <InnerNavMobile />
         <QuestionAnswer />
+        <QuestionMobile />
       </div>
     </div>
   );

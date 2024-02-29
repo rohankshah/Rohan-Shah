@@ -1,0 +1,135 @@
+.question-mobile-container {
+  display: none;
+}
+
+@media only screen and (max-width: 360px) {
+  .question-mobile-container {
+    display: block;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 10px;
+    background: #f8f8f8;
+    border-bottom: 0.4px solid #0f0f0f;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  .question-mobile-upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .question-mobile-upper-text {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #0f0f0f;
+  }
+
+  .question-mobile-upper-icon-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .question-mobile-upper-icon-text {
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #363636;
+  }
+
+  .question-content {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0f0f0f;
+  }
+
+  .badge-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .tag-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+  }
+
+  .individual-tag {
+    background: #dbefff;
+    border-radius: 6px;
+    padding: 3px 16px;
+    font-family: "Hind";
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    color: #2a2a2a;
+    width: fit-content;
+  }
+
+  .difficulty {
+    display: flex;
+    align-items: center;
+    padding: 7px 14px;
+    background: #98fd75;
+    border-radius: 6px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 10px;
+    color: #2a2a2a;
+  }
+
+  .answer-stats-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .answer-stats-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #3bca09;
+  }
+
+  .answer-stats-view-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #0f0f0f;
+  }
+
+  .eye-icon-mobile {
+    height: 10px;
+    width: 16px;
+  }
+}
