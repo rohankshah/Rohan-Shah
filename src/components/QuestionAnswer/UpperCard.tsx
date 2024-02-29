@@ -5,7 +5,7 @@ import informationIcon from "../../assets/informationIcon.svg";
 
 const UpperCard = () => {
   return (
-    <div className="question-container">
+    <div className="question-answer-container">
       <div className="upper-card">
         <div className="upper-card-top">
           <div className="badge-container">

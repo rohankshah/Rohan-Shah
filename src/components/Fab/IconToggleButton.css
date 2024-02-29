@@ -1,0 +1,48 @@
+.fab-toggle-desktop {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 60px;
+  height: 60px;
+  background: #f8f8f8;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 30;
+}
+
+.toggle-open-desktop {
+  display: block;
+}
+
+.toggle-open-mobile {
+  display: none;
+}
+
+.white-background {
+  background-color: #f8f8f8;
+}
+
+@media only screen and (max-width: 360px) {
+  .fab-toggle-desktop {
+    width: 48px;
+    height: 48px;
+    right: 24px;
+    bottom: 24px;
+    background: #0f0f0f;
+  }
+
+  .toggle-open-desktop {
+    display: none;
+  }
+
+  .toggle-open-mobile {
+    display: block;
+  }
+
+  .white-background {
+    background-color: #f8f8f8;
+  }
+}
