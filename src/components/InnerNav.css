@@ -1,0 +1,24 @@
+.container {
+  margin-top: 40px;
+  width: 1304px;
+}
+
+.inner-items {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.title {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  color: #f8f8f8;
+}
+
+@media only screen and (max-width: 360px) {
+  .container {
+    display: none;
+  }
+}

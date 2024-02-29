@@ -1,0 +1,48 @@
+.answers {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #f8f8f8;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 832px;
+}
+
+.filter-options {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.filter-button {
+  display: flex;
+  flex-direction: row;
+  padding: 8px 16px;
+  gap: 10px;
+  background: #f8f8f8;
+  border-radius: 6px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2a2a2a;
+}
+
+.sort-by {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #f8f8f8;
+}
+
+@media only screen and (max-width: 360px) {
+  .filter-container {
+    display: none;
+  }
+}

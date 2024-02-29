@@ -1,0 +1,137 @@
+.lower-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0px;
+  gap: 16px;
+  width: 832px;
+  background: #dee7ff;
+  border: 1px solid #979595;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.lower-card-upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 750px;
+}
+
+.lower-card-profile-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-pic-lower {
+  height: 60px;
+  width: 60px;
+}
+
+.lower-card-profile-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #0f0f0f;
+}
+
+.name-bold {
+  font-weight: 700;
+}
+
+.profile-lower-text {
+  font-size: 18px;
+}
+
+.edit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #0f0f0f;
+}
+
+.lower-card-middle {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #0f0f0f;
+  width: 750px;
+}
+
+.show-more {
+  font-weight: 700;
+}
+
+.lower-card-lower {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 748px;
+  gap: 16px;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #0f0f0f;
+}
+
+.text-input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-input {
+  padding: 10px;
+  gap: 27px;
+  width: 478px;
+  border: 1px solid #0f0f0f;
+  border-radius: 6px;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979595;
+}
+
+.post-container {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(245, 245, 245, 0.5);
+  border: 1px solid #000000;
+  border-radius: 6px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #979595;
+}
+
+@media only screen and (max-width: 360px) {
+  .lower-card-container {
+    display: none;
+  }
+}
