@@ -33,11 +33,33 @@
   cursor: pointer;
 }
 
+.icon-button-outer {
+  width: 70px;
+  height: 70px;
+  background: transparent;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 360px) {
   .icon-button {
     width: 48px;
     height: 48px;
     background-color: #f8f8f8;
+  }
+
+  .icon-button-outer {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .fab-menu-item {

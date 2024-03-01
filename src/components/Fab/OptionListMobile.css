@@ -28,4 +28,15 @@
     width: 100%;
     gap: 16px;
   }
+
+  .icon-button-outer {
+    width: 58px;
+    height: 58px;
+    background: transparent;
+    border: 2px solid #cccccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

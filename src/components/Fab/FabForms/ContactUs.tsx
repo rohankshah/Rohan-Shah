@@ -12,9 +12,9 @@ const ContactUs: React.FC<ContactUsProps> = ({ loggedIn }) => {
   return (
     <>
       <FabFormHeading
-        content1="Let us know about the"
-        boldWord="Issue"
-        content2="you are facing right now!"
+        content1="Let us know what"
+        boldWord="your queries"
+        content2="are!"
       />
       <div className="report-issue-choose">
         <FabFormLabel description="Your Name" required />

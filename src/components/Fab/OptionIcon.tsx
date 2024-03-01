@@ -8,12 +8,14 @@ interface OptionIconProps {
   name: string;
   setOption: (newValue: string) => void;
   noLabel?: boolean;
+  currentSelected?: string;
 }
 
 const OptionIcon: React.FC<OptionIconProps> = ({
   name,
   setOption,
   noLabel = false,
+  currentSelected,
 }) => {
   return (
     <div className="fab-menu-item">
@@ -25,11 +27,15 @@ const OptionIcon: React.FC<OptionIconProps> = ({
             .join(" ")}
         </span>
       )}
-      <div className="icon-button" onClick={() => setOption(name)}>
-        {name === "report-issue" && <img src={reportIssue} alt={name} />}
-        {name === "share-feedback" && <img src={shareFeedback} alt={name} />}
-        {name === "give-suggestion" && <img src={giveSuggestion} alt={name} />}
-        {name === "contact-us" && <img src={contactUs} alt={name} />}
+      <div className={currentSelected === name ? "icon-button-outer" : ""}>
+        <div className="icon-button" onClick={() => setOption(name)}>
+          {name === "report-issue" && <img src={reportIssue} alt={name} />}
+          {name === "share-feedback" && <img src={shareFeedback} alt={name} />}
+          {name === "give-suggestion" && (
+            <img src={giveSuggestion} alt={name} />
+          )}
+          {name === "contact-us" && <img src={contactUs} alt={name} />}
+        </div>
       </div>
     </div>
   );

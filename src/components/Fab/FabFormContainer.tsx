@@ -10,6 +10,7 @@ interface FabFormContainerProps {
   setOption: (newValue: string) => void;
   selectedOption: string;
   loggedIn: boolean;
+  currentSelected: string;
 }
 
 const FabFormContainer: React.FC<FabFormContainerProps> = ({
@@ -17,12 +18,17 @@ const FabFormContainer: React.FC<FabFormContainerProps> = ({
   setOption,
   selectedOption,
   loggedIn,
+  currentSelected,
 }) => {
   return (
     <>
       <div className="fab-form-container">
         <div className="fab-form-relative-container">
-          <OptionListMobile closeToggle={closeToggle} setOption={setOption} />
+          <OptionListMobile
+            closeToggle={closeToggle}
+            setOption={setOption}
+            currentSelected={currentSelected}
+          />
           {selectedOption === "report-issue" && (
             <ReportIssue loggedIn={loggedIn} />
           )}
