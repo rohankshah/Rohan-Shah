@@ -38,6 +38,7 @@ interface FabFormContainerProps {
   contactText: string;
   setContactText: (newValue: string) => void;
   onSubmitForm: (newValue: string) => void;
+  options: string[];
 }
 
 const FabFormContainer: React.FC<FabFormContainerProps> = ({
@@ -73,6 +74,7 @@ const FabFormContainer: React.FC<FabFormContainerProps> = ({
   contactText,
   setContactText,
   onSubmitForm,
+  options,
 }) => {
   return (
     <>
@@ -82,6 +84,7 @@ const FabFormContainer: React.FC<FabFormContainerProps> = ({
             closeToggle={closeToggle}
             setOption={setOption}
             currentSelected={currentSelected}
+            options={options}
           />
           {selectedOption === "report-issue" && (
             <ReportIssue

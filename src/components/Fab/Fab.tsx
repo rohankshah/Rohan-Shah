@@ -195,6 +195,7 @@ const Fab: React.FC<FabProps> = ({ options }) => {
           contactText={contactText}
           setContactText={setContactText}
           onSubmitForm={onSubmitForm}
+          options={options}
         />
       )}
     </div>
