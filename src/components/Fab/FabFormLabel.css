@@ -1,0 +1,23 @@
+.report-issue-choose-heading {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #4d4d4d;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.red-asteriks {
+  color: #fd443a;
+  font-size: 1.2rem;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 360px) {
+  .report-issue-choose-heading {
+    font-size: 16px;
+  }
+}

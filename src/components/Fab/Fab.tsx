@@ -12,6 +12,7 @@ interface FabProps {
 const Fab: React.FC<FabProps> = ({ options }) => {
   const [fabOpen, setFabOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const [loggedIn] = useState(false);
 
   useEffect(() => {
     console.log(selectedOption);
@@ -76,6 +77,7 @@ const Fab: React.FC<FabProps> = ({ options }) => {
           closeToggle={toggleOpen}
           setOption={setOption}
           selectedOption={selectedOption}
+          loggedIn={loggedIn}
         />
       )}
     </div>

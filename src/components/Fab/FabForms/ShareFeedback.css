@@ -31,6 +31,28 @@ select option {
   margin-top: 24px;
 }
 
+.anonymous-feedback-container {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  gap: 8px;
+}
+
+.anonymous-feedback-check {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #808080;
+  border-radius: 4px;
+}
+
+.anonymous-feedback-text {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #4d4d4d;
+}
+
 .report-issue-email-section {
   margin-top: 24px;
 }
@@ -65,6 +87,26 @@ select option {
 
   .report-issue-detail {
     margin-top: 20px;
+  }
+
+  .anonymous-feedback-container {
+    margin-top: 20px;
+    gap: 6px;
+  }
+
+  .anonymous-feedback-check {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #808080;
+    border-radius: 4px;
+  }
+
+  .anonymous-feedback-text {
+    font-size: 14px;
+  }
+
+  .report-issue-email-section {
+    margin-top: 24px;
   }
 
   .report-issues-submit {

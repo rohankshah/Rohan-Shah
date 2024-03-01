@@ -1,0 +1,39 @@
+.fab-form-input {
+  padding: 12px 16px;
+  width: 100%;
+  border: 1.5px solid #999999;
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #808080;
+  width: 100%;
+}
+
+.fab-form-input-dark {
+  padding: 12px 16px;
+  background: #e0e0e0;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  color: #808080;
+  width: 100%;
+}
+
+@media only screen and (max-width: 360px) {
+  .fab-form-input {
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .fab-form-input-dark {
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+}

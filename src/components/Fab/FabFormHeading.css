@@ -1,0 +1,31 @@
+.report-issue-horizontal-line {
+  height: 1px;
+  border: 2px solid #cccccc;
+  width: 100%;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.report-issue-heading {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: #4d4d4d;
+}
+
+.report-issue-heading-imp {
+  color: #0f0f0f;
+}
+
+@media only screen and (max-width: 360px) {
+  .report-issue-horizontal-line {
+    border: 2px solid #cccccc;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  .report-issue-heading {
+    font-size: 18px;
+  }
+}

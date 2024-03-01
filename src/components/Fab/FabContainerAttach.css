@@ -1,0 +1,88 @@
+.report-issue-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+  padding: 16px;
+  background: #e0e0e0;
+  border-radius: 8px;
+}
+.detail-input {
+  width: 100%;
+  padding: 8px 0px;
+  resize: none;
+  height: 90px;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #0f0f0f;
+}
+
+.report-issue-attachment-container {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 55px;
+}
+
+.detail-input:focus {
+  border: 0 none #fff;
+  outline: none;
+}
+
+.attachment-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px 10px 4px 4px;
+  background: #c7c7c7;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 100%;
+  color: #333333;
+}
+
+.attach-file-input {
+  display: none;
+}
+
+.uploaded-img {
+  height: 50px;
+  width: 50px;
+  border: none;
+}
+
+.attach-image-div {
+  position: relative;
+}
+
+.tiny-cross {
+  position: absolute;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: -8px;
+  right: -8px;
+}
+
+@media only screen and (max-width: 360px) {
+  .report-issue-detail-container {
+    padding: 12px;
+  }
+
+  .detail-input {
+    font-size: 16px;
+  }
+
+  .attachment-button {
+    padding: 4px;
+    font-size: 16px;
+  }
+}

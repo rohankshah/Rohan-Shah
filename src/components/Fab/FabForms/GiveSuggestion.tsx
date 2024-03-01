@@ -1,20 +1,21 @@
-import "./ReportIssue.css";
+import "./GiveSuggestion.css";
+
 import FabFormHeading from "../FabFormHeading";
 import FabFormLabel from "../FabFormLabel";
-import FabFormInput from "../FabFormInput";
 import FabContainerAttach from "../FabContainerAttach";
+import FabFormInput from "../FabFormInput";
 
-interface ReportIssueProps {
+interface GiveSuggestionProps {
   loggedIn: boolean;
 }
 
-const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
+const GiveSuggestion: React.FC<GiveSuggestionProps> = ({ loggedIn }) => {
   return (
     <>
       <FabFormHeading
-        content1="Let us know about the"
-        boldWord="Issue"
-        content2="you are facing right now!"
+        content1="Share your"
+        boldWord="Suggestions"
+        content2=" with us for a chance to earn rewards!"
       />
       <div className="report-issue-choose">
         <FabFormLabel description="Choose a section" />
@@ -31,17 +32,14 @@ const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
       </div>
       <div className="report-issue-detail">
         <FabFormLabel
-          description="Describe the issue in detail"
+          description="Describe the suggestion in detail"
           required={true}
         />
         <FabContainerAttach />
       </div>
       {!loggedIn && (
         <div className="report-issue-email-section">
-          <FabFormLabel
-            description="Enter an email to receive an update"
-            required
-          />
+          <FabFormLabel description="Enter an email to receive an update" />
           <FabFormInput placeholder="Enter your Email (optional)" />
         </div>
       )}
@@ -52,4 +50,4 @@ const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
   );
 };
 
-export default ReportIssue;
+export default GiveSuggestion;

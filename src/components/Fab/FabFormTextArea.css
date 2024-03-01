@@ -1,0 +1,36 @@
+.textarea-container {
+  padding: 12px 16px;
+  width: 100%;
+  background: #e0e0e0;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+}
+
+.textarea-input {
+  width: 100%;
+  padding: 8px 0px;
+  resize: none;
+  height: 90px;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #0f0f0f;
+}
+
+.textarea-input:focus {
+  border: 0 none #fff;
+  outline: none;
+}
+
+@media only screen and (max-width: 360px) {
+  .textarea-container {
+    padding: 12px;
+  }
+
+  .textarea-input {
+    font-size: 16px;
+  }
+}
