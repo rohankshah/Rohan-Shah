@@ -1,0 +1,31 @@
+.option-list-mobile-container {
+  display: none;
+}
+
+.option-mobile-container {
+  background-color: #f8f8f8;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-mobile-img {
+  height: 22px;
+  width: 22px;
+}
+
+@media only screen and (max-width: 360px) {
+  .option-list-mobile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 260;
+    position: absolute;
+    bottom: calc(100% + 50px);
+    width: 100%;
+    gap: 16px;
+  }
+}
