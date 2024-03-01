@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./FabContainerAttach.css";
 import { useRef, useState } from "react";
 import attachmentIcon from "../../assets/Fab/attachmentIcon.svg";
@@ -16,15 +17,17 @@ const FabContainerAttach: React.FC<FabContainerAttachProps> = ({
   const imageUploader = useRef(null);
   const [imagePresent, setImagePresent] = useState(false);
 
-  const handleImageUpload = (e) => {
+  const handleImageUpload = (e: any) => {
     const [file] = e.target.files;
     if (file) {
       setImagePresent(true);
       const reader = new FileReader();
       const { current } = uploadedImage;
-      current.file = file;
+      if (current) {
+        (current as any).file = file;
+      }
       reader.onload = (e) => {
-        current.src = e.target.result;
+        (current as any).src = e.target?.result;
       };
       reader.readAsDataURL(file);
     }
@@ -41,7 +44,7 @@ const FabContainerAttach: React.FC<FabContainerAttachProps> = ({
       <div className="report-issue-attachment-container">
         <div
           className="attachment-button"
-          onClick={() => imageUploader.current.click()}
+          onClick={() => (imageUploader as any).current.click()}
         >
           <img src={attachmentIcon} alt="attachment-icon" />
           <span>Attach</span>
