@@ -57,6 +57,10 @@ select option {
   color: #f8f8f8;
 }
 
+.disabled-button {
+  opacity: 70%;
+}
+
 @media only screen and (max-width: 360px) {
   select {
     padding: 10px 12px;

@@ -7,9 +7,25 @@ import FabFormInput from "../FabFormInput";
 
 interface GiveSuggestionProps {
   loggedIn: boolean;
+  suggestionSelect: string;
+  setSuggestionSelect: (newValue: string) => void;
+  suggestionText: string;
+  setSuggestionText: (newValue: string) => void;
+  suggestionEmail: string;
+  setSuggestionEmail: (newValue: string) => void;
+  onSubmitForm: (newValue: string) => void;
 }
 
-const GiveSuggestion: React.FC<GiveSuggestionProps> = ({ loggedIn }) => {
+const GiveSuggestion: React.FC<GiveSuggestionProps> = ({
+  loggedIn,
+  suggestionSelect,
+  setSuggestionSelect,
+  suggestionEmail,
+  setSuggestionEmail,
+  suggestionText,
+  setSuggestionText,
+  onSubmitForm,
+}) => {
   return (
     <>
       <FabFormHeading
@@ -19,7 +35,10 @@ const GiveSuggestion: React.FC<GiveSuggestionProps> = ({ loggedIn }) => {
       />
       <div className="report-issue-choose">
         <FabFormLabel description="Choose a section" />
-        <select>
+        <select
+          value={suggestionSelect}
+          onChange={(e) => setSuggestionSelect(e.target.value)}
+        >
           <option value="" disabled selected hidden>
             Select
           </option>
@@ -35,16 +54,32 @@ const GiveSuggestion: React.FC<GiveSuggestionProps> = ({ loggedIn }) => {
           description="Describe the suggestion in detail"
           required={true}
         />
-        <FabContainerAttach />
+        <FabContainerAttach
+          reportIssueText={suggestionText}
+          setReportIssueText={setSuggestionText}
+        />
       </div>
       {!loggedIn && (
         <div className="report-issue-email-section">
           <FabFormLabel description="Enter an email to receive an update" />
-          <FabFormInput placeholder="Enter your Email (optional)" />
+          <FabFormInput
+            placeholder="Enter your Email (optional)"
+            currValue={suggestionEmail}
+            setNewValue={setSuggestionEmail}
+          />
         </div>
       )}
       <div className="report-issues-submit-container">
-        <button className="report-issues-submit">Submit</button>
+        <button
+          className={
+            suggestionText.length > 0
+              ? "report-issues-submit"
+              : "disabled-button report-issues-submit"
+          }
+          onClick={() => onSubmitForm("give-suggestion")}
+        >
+          Submit
+        </button>
       </div>
     </>
   );

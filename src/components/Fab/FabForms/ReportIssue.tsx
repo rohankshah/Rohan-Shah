@@ -6,9 +6,25 @@ import FabContainerAttach from "../FabContainerAttach";
 
 interface ReportIssueProps {
   loggedIn: boolean;
+  reportIssueSelected: string;
+  setReportIssueSelected: (newValue: string) => void;
+  reportIssueText: string;
+  setReportIssueText: (newValue: string) => void;
+  reportIssueEmail: string;
+  setReportIssueEmail: (newValue: string) => void;
+  onSubmitForm: (newValue: string) => void;
 }
 
-const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
+const ReportIssue: React.FC<ReportIssueProps> = ({
+  loggedIn,
+  reportIssueSelected,
+  setReportIssueSelected,
+  reportIssueText,
+  setReportIssueText,
+  reportIssueEmail,
+  setReportIssueEmail,
+  onSubmitForm,
+}) => {
   return (
     <>
       <FabFormHeading
@@ -18,7 +34,10 @@ const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
       />
       <div className="report-issue-choose">
         <FabFormLabel description="Choose a section" />
-        <select>
+        <select
+          value={reportIssueSelected}
+          onChange={(e) => setReportIssueSelected(e.target.value)}
+        >
           <option value="" disabled selected hidden>
             Select
           </option>
@@ -34,7 +53,10 @@ const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
           description="Describe the issue in detail"
           required={true}
         />
-        <FabContainerAttach />
+        <FabContainerAttach
+          reportIssueText={reportIssueText}
+          setReportIssueText={setReportIssueText}
+        />
       </div>
       {!loggedIn && (
         <div className="report-issue-email-section">
@@ -42,11 +64,25 @@ const ReportIssue: React.FC<ReportIssueProps> = ({ loggedIn }) => {
             description="Enter an email to receive an update"
             required
           />
-          <FabFormInput placeholder="Enter your Email (optional)" />
+          <FabFormInput
+            placeholder="Enter your Email (optional)"
+            currValue={reportIssueEmail}
+            setNewValue={setReportIssueEmail}
+          />
         </div>
       )}
       <div className="report-issues-submit-container">
-        <button className="report-issues-submit">Submit</button>
+        <button
+          className={
+            reportIssueText.length > 0
+              ? "report-issues-submit"
+              : "disabled-button report-issues-submit"
+          }
+          disabled={reportIssueText.length > 0 ? false : true}
+          onClick={() => onSubmitForm("report-issues")}
+        >
+          Submit
+        </button>
       </div>
     </>
   );

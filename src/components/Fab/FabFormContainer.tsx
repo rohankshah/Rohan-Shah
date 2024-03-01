@@ -11,6 +11,33 @@ interface FabFormContainerProps {
   selectedOption: string;
   loggedIn: boolean;
   currentSelected: string;
+  reportIssueSelected: string;
+  setReportIssueSelected: (newValue: string) => void;
+  reportIssueText: string;
+  setReportIssueText: (newValue: string) => void;
+  reportIssueEmail: string;
+  setReportIssueEmail: (newValue: string) => void;
+  feedbackText: string;
+  setFeedbackText: (newValue: string) => void;
+  feedbackAnonymous: boolean;
+  setFeedbackAnonymous: (newValue: boolean) => void;
+  feedbackEmail: string;
+  setFeedbackEmail: (newValue: string) => void;
+  suggestionSelect: string;
+  setSuggestionSelect: (newValue: string) => void;
+  suggestionText: string;
+  setSuggestionText: (newValue: string) => void;
+  suggestionEmail: string;
+  setSuggestionEmail: (newValue: string) => void;
+  contactName: string;
+  setContactName: (newValue: string) => void;
+  contactEmail: string;
+  setContactEmail: (newValue: string) => void;
+  contactNumber: string;
+  setContactNumber: (newValue: string) => void;
+  contactText: string;
+  setContactText: (newValue: string) => void;
+  onSubmitForm: (newValue: string) => void;
 }
 
 const FabFormContainer: React.FC<FabFormContainerProps> = ({
@@ -19,6 +46,33 @@ const FabFormContainer: React.FC<FabFormContainerProps> = ({
   selectedOption,
   loggedIn,
   currentSelected,
+  reportIssueSelected,
+  setReportIssueSelected,
+  reportIssueText,
+  setReportIssueText,
+  reportIssueEmail,
+  setReportIssueEmail,
+  feedbackText,
+  setFeedbackText,
+  feedbackAnonymous,
+  setFeedbackAnonymous,
+  feedbackEmail,
+  setFeedbackEmail,
+  suggestionSelect,
+  setSuggestionSelect,
+  suggestionEmail,
+  setSuggestionEmail,
+  suggestionText,
+  setSuggestionText,
+  contactName,
+  setContactName,
+  contactEmail,
+  setContactEmail,
+  contactNumber,
+  setContactNumber,
+  contactText,
+  setContactText,
+  onSubmitForm,
 }) => {
   return (
     <>
@@ -30,15 +84,55 @@ const FabFormContainer: React.FC<FabFormContainerProps> = ({
             currentSelected={currentSelected}
           />
           {selectedOption === "report-issue" && (
-            <ReportIssue loggedIn={loggedIn} />
+            <ReportIssue
+              loggedIn={loggedIn}
+              reportIssueSelected={reportIssueSelected}
+              setReportIssueEmail={setReportIssueEmail}
+              setReportIssueSelected={setReportIssueSelected}
+              setReportIssueText={setReportIssueText}
+              reportIssueEmail={reportIssueEmail}
+              reportIssueText={reportIssueText}
+              onSubmitForm={onSubmitForm}
+            />
           )}
           {selectedOption === "give-suggestion" && (
-            <GiveSuggestion loggedIn={loggedIn} />
+            <GiveSuggestion
+              loggedIn={loggedIn}
+              suggestionSelect={suggestionSelect}
+              setSuggestionSelect={setSuggestionSelect}
+              suggestionEmail={suggestionEmail}
+              setSuggestionEmail={setSuggestionEmail}
+              suggestionText={suggestionText}
+              setSuggestionText={setSuggestionText}
+              onSubmitForm={onSubmitForm}
+            />
           )}
           {selectedOption === "share-feedback" && (
-            <ShareFeedback loggedIn={loggedIn} />
+            <ShareFeedback
+              loggedIn={loggedIn}
+              feedbackText={feedbackText}
+              setFeedbackText={setFeedbackText}
+              feedbackAnonymous={feedbackAnonymous}
+              setFeedbackAnonymous={setFeedbackAnonymous}
+              feedbackEmail={feedbackEmail}
+              setFeedbackEmail={setFeedbackEmail}
+              onSubmitForm={onSubmitForm}
+            />
           )}
-          {selectedOption === "contact-us" && <ContactUs loggedIn={loggedIn} />}
+          {selectedOption === "contact-us" && (
+            <ContactUs
+              loggedIn={loggedIn}
+              contactName={contactName}
+              setContactName={setContactName}
+              contactEmail={contactEmail}
+              setContactEmail={setContactEmail}
+              contactNumber={contactNumber}
+              setContactNumber={setContactNumber}
+              contactText={contactText}
+              setContactText={setContactText}
+              onSubmitForm={onSubmitForm}
+            />
+          )}
         </div>
       </div>
     </>
